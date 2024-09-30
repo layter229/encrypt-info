@@ -1,7 +1,5 @@
 # Алфавит (русский, можно изменить на латиницу при необходимости)
-alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-
-
+alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 
 
 # Функция шифрования
@@ -23,7 +21,7 @@ def vigenere_encrypt(plaintext, key):
 
 
 if __name__ == "__main__":
-    plaintext = "денисевгеньевич"
-    key = "епифанов"
+    plaintext = "ДЕНИСЕВГЕНЬЕВИЧ"
+    key = "ЕПИФАНОВ"
     encrypted = vigenere_encrypt(plaintext, key)
     print(f"Зашифрованный текст: {encrypted}")
