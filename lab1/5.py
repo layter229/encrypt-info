@@ -10,7 +10,6 @@ def vigenere_encrypt(plaintext, keyword):
         p_index = alphabet.index(p_char)
         k_index = alphabet.index(k_char)
 
-        # Шифрование с использованием формулы
         c_index = (p_index + k_index) % len(alphabet)
         ciphertext.append(alphabet[c_index])
 
