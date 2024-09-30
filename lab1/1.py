@@ -8,30 +8,33 @@ alf = { 0: 'А', 1: 'Б', 2: 'В', 3: 'Г', 4: 'Д', 5: 'Е', 6: 'Ё', 7: 'Ж', 
 result1 = []
 result2 = []
 
-fio = "ЕПИФАНОВ ДЕНИС ЕВГЕНЬЕВИЧ"
+
+def cezar_encrypt(fio):
+    for i in range(len(fio)):
+        for x in range(len(alf)):
+            if alf[x] == fio[i]:
+                decrypted.append(x)
 
 
-for i in range(len(fio)):
-    for x in range(len(alf)):
-        if alf[x] == fio[i]:
-            decrypted.append(x)
-
-
-for k in range(len(decrypted)):
-    crypt.append(decrypted[k] + 3)
+    for k in range(len(decrypted)):
+        crypt.append(decrypted[k] + 3)
 
 
 
-# for k in range(len(decrypted)):
-#     print(alf.get())
+    # for k in range(len(decrypted)):
+    #     print(alf.get())
 
-for c in range(len(decrypted)):
-    result1.append(alf.get(decrypted[c]))
-    print(alf.get(decrypted[c]) + '---' + str(decrypted[c]))
+    for c in range(len(decrypted)):
+        result1.append(alf.get(decrypted[c]))
+        print(alf.get(decrypted[c]) + '---' + str(decrypted[c]))
 
-for c in range(len(crypt)):
-    result2.append(alf.get(crypt[c]))
-    print(alf.get(crypt[c]) + '---' + str(crypt[c]))
+    for c in range(len(crypt)):
+        result2.append(alf.get(crypt[c]))
+        print(alf.get(crypt[c]) + '---' + str(crypt[c]))
 
-print(result1)
-print(result2)
+    print(result1)
+    print(result2)
+
+if __name__ == "__main__":
+    fio = "ЕПИФАНОВ ДЕНИС ЕВГЕНЬЕВИЧ"
+    encrypted = cezar_encrypt(fio)

@@ -17,7 +17,7 @@ def vigenere_encrypt(plaintext, key):
             encrypted_char = alphabet[(text_index + key_index) % len(alphabet)]
             encrypted_text.append(encrypted_char)
         else:
-            encrypted_text.append(char)  # Если символ не в алфавите, просто добавляем его как есть
+            encrypted_text.append(char)
 
     return ''.join(encrypted_text)
 
